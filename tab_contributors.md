@@ -24,3 +24,14 @@ Individuals that provided a significant contribution to the project:
 | Danielle Guetta  | Astrix Security | [LinkedIn](https://www.linkedin.com/in/danielle-guetta-94108310/) |
 | Bar Kaduri  | Orca Security | [LinkedIn](https://www.linkedin.com/in/bar-kaduri) |
 | Yonatan Yosef  | Orca Security | [LinkedIn](https://www.linkedin.com/in/yonatan-yosef-93a028188/) |
+| Adam Ochayon | Oasis Security | [LinkedIn](https://www.linkedin.com/in/adamochayon/) |
+| Yaron Sheffer | Intuit | [LinkedIn](https://www.linkedin.com/in/yaronf/) |
+| Ben Kim | Cremit | [LinkedIn](https://www.linkedin.com/in/ben-dh-kim/) |
+
+## Sponsors
+
+The OWASP Non-Human Identities Top 10 project is sponsored by [Astrix](https://astrix.security/)
+
+<br>
+
+<a href="https://astrix.security/"><img src="assets/images/sponsor-logo-1.png" alt="astrix.security" height="75" width="334" /></a>
