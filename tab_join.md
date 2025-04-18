@@ -23,7 +23,7 @@ Here are some ways you can help:
 - Feel free to also add a note for the next periodic "OWASP Non-Human Identities Top 10" meeting [here](https://docs.google.com/document/d/1lJE0AwgWc4PHUX5Y0-s3TPhi6Lh8_dqWgsiEeJopkKY/edit?pli=1#heading=h.29vste2an1z).
 
 
-Individuals and organizations that provide a significant contribution to the project will be listed on the acknowledgments page.
+Individuals and organizations that provide a significant contribution to the project will be listed on the Contributors page.
 
 ## How to reach out:
 
