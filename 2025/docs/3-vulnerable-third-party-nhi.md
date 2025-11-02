@@ -17,6 +17,7 @@ Moreover, 3rd parties can be exposed to hard-coded credentials within the codeba
 * **IDE Integration with Code Repositories** Developers often configure their IDEs to interact directly with code repositories like GitHub or GitLab. This setup requires supplying the IDE or its extensions with personal access tokens (PATs) or SSH keys to enable features like code syncing, pushing commits, and managing pull requests. If an extension is compromised, these credentials can be exposed, allowing unauthorized access to the developer's repositories and potentially sensitive organizational code.
 * **Extensions Accessing Cloud Resources** Extensions that facilitate deployment and testing on virtual machines or cloud services require access to cloud environments. Developers provide these extensions with NHIs such as API keys or access tokens to interact with services like AWS, Azure, or Google Cloud Platform. A malicious extension could use these credentials to access, modify, or delete cloud resources, leading to data breaches or service disruptions.
 * **3rd Party Service Provider** Developers integrate a 3rd party service provider such as Sisense to create a BI application. The developers create a privileged NHI such as database credentials and send them to the provider as part of the integration process. If the provider is breached, the attacker can leverage the NHI to gain access to the developer’s environment.
+* **Salesloft Drift Breach (SaaS Token Exposure):** A misconfigured integration between a conversational marketing platform (Drift) and a sales engagement tool (Salesloft) led to the leakage of OAuth access tokens with broad API permissions. The issued access token was intended for limited use, but due to a misconfiguration the token scope expanded to grant unintended elevated privileges. Attackers who obtained the token were able to interact with sensitive workloads and services well beyond the original design, exposing customer data and creating unauthorized access paths.
 
 
 ## How To Prevent
@@ -32,6 +33,13 @@ Moreover, 3rd parties can be exposed to hard-coded credentials within the codeba
 * **Use Ephemeral and Rotating Credentials**  
    - Replace long-term secrets with short-lived, ephemeral credentials (e.g., AWS STS, Azure Managed Identities).  
    - Automate credential rotation to limit the impact of compromised third-party integrations.
+
+* **Prevent SaaS Token Exposure in Integrations**
+   - Continuously validate that token scopes match indended access levels and rotate credentials regularly.
+   - Avoid long-lived or over-privileged tokens in SaaS and AI workloads.
+   - Validate SaaS integrations with security review processes to confirm tokens are not logged, cached or stored in plaintext.
+   - Automate drift detection by monitoring for privilege changes in issued tokens.
+   - Ensure each workload / agent uses it's own scoped, auditable identity to minimize the blast radius.
 
 
 ## References

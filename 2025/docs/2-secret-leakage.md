@@ -15,7 +15,6 @@ Exposed secrets can lead to significant security risks. If a secret is leaked, w
 
 * **Azure SAS Token Leakage:** An Azure SAS Token is committed to a public Github repository. Attackers use that SAS Token to authenticate to the associated Azure subscription and leak internal Microsoft Teams messages.
 * **Delinea Admin API Key:** A Delinea Admin API Key is stored in a script in an employee-public file share. An attacker with limited privileges in the corporate network identifies the API Key, reads an admin credential from the PAM and escalates their privilege in the corporate network.
-* **Salesloft Drift Breach (SaaS Token Exposure):** A misconfigured integration between a conversational marketing platform (Drift) and a sales engagement tool (Salesloft) led to the leakage of OAuth access tokens with broad API permissions. The issued access token was intended for limited use, but due to a misconfiguration the token scope expanded to grant unintended elevated privileges. Attackers who obtained the token were able to interact with sensitive workloads and services well beyond the original design, exposing customer data and creating unauthorized access paths.
 
 
 
@@ -40,13 +39,6 @@ Exposed secrets can lead to significant security risks. If a secret is leaked, w
    - Automate the process of secret rotation to reduce the impact of exposed credentials.
    - Use tools that support secret versioning and automated updates in dependent services.
 
-* **Prevent SaaS Token Exposure in Integrations**
-   - Continuously validate that token scopes match indended access levels and rotate credentials regularly.
-   - Avoid long-lived or over-privileged tokens in SaaS and AI workloads.
-   - Validate SaaS integrations with security review processes to confirm tokens are not logged, cached or stored in plaintext.
-   - Automate drift detection by monitoring for privilege changes in issued tokens.
-   - Ensure each workload / agent uses it's own scoped, auditable identity to minimize the blast radius.
-   
 ## Related OWASP Resources
 * [OWASP Secrets Management Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Secrets_Management_Cheat_Sheet.html)
 * [OWASP WrongSecrets project](https://github.com/OWASP/wrongsecrets/)
@@ -58,7 +50,6 @@ Exposed secrets can lead to significant security risks. If a secret is leaked, w
 * HashiCorp Vault: What is Vault? - [link](https://developer.hashicorp.com/vault/docs/what-is-vault)
 * GitHub: Best Practices for Securing Your Code -[link](https://docs.github.com/en/code-security)
 * AWS Secrets Manager - [link](https://aws.amazon.com/secrets-manager/)
-* Salesloft Drift Integration Used To Compromise Salesforce Instances - [link](https://unit42.paloaltonetworks.com/threat-brief-compromised-salesforce-instances/)
 
 ## Data points
 * [CSA NHI Report](https://cloudsecurityalliance.org/artifacts/state-of-non-human-identity-security-survey-report)
