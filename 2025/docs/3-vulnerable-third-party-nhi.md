@@ -47,7 +47,7 @@ Moreover, 3rd parties can be exposed to hard-coded credentials within the codeba
 * [Malicious VSCode Extensions Stealing Data](https://blog.checkpoint.com/securing-the-cloud/malicious-vscode-extensions-with-more-than-45k-downloads-steal-pii-and-enable-backdoors/)
 * [Deep Dive into VSCode Extension Vulnerabilities](https://snyk.io/blog/visual-studio-code-extension-security-vulnerabilities-deep-dive/)
 * [Making sense out of the Sisense hack](https://medium.com/@ronilichtman/making-sense-out-of-the-sisense-hack-f61a3d9b80a7)
-
+* [Salesloft Drift Integration Used To Compromise Salesforce Instances](https://unit42.paloaltonetworks.com/threat-brief-compromised-salesforce-instances/)
 
 ## Data points
 * [Datadog State of the Cloud 2024]((https://www.datadoghq.com/state-of-cloud-security/))
@@ -63,3 +63,4 @@ Moreover, 3rd parties can be exposed to hard-coded credentials within the codeba
     * 38% of organizations reported limited to no visibility into third-party vendors.
 * Recent Breaches
     * Sisense Breach - [link](https://medium.com/@ronilichtman/making-sense-out-of-the-sisense-hack-f61a3d9b80a7)
+    * Salesloft Breach - [link](https://unit42.paloaltonetworks.com/threat-brief-compromised-salesforce-instances/)
